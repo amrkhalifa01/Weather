@@ -1,0 +1,137 @@
+/* Start Global Styling */
+
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("../webfonts/MYRIADPRO-REGULAR.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Light"), url("../webfonts/MyriadPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold"), url("../webfonts/MYRIADPRO-BOLD.woff") format("woff");
+}
+
+body {
+  font-family: "Myriad Pro Regular";
+}
+
+.font-regular {
+  font-family: "Myriad Pro Regular";
+}
+
+.font-light {
+  font-family: "Myriad Pro Light";
+}
+
+.font-bold {
+  font-family: "Myriad Pro Bold";
+}
+
+.small-fs {
+  font-size: 12px;
+}
+
+.links {
+  border: 2px solid #009ad8;
+  color: #009ad8;
+}
+
+nav button[aria-expanded="false"] {
+  color: #009ad8;
+}
+
+nav button[aria-expanded="true"] {
+  color: #e11218;
+}
+
+nav ul a {
+  border: 2px solid transparent;
+  transition: all 0.3s !important;
+}
+
+nav ul a:hover {
+  border: 2px solid #009ad8 !important;
+  color: #009ad8 !important;
+}
+
+.bg-dark-blue {
+  background-color: #1e202b !important;
+}
+
+.bg-img {
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+}
+
+.btn-blue {
+  background-color: #009ad8;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.btn-blue:hover {
+  color: #000;
+}
+
+.btn-position {
+  position: absolute;
+  right: 0;
+  transform: translateX(-15%);
+}
+
+.bg-dark-grey {
+  background-color: #2d303d;
+}
+
+.bg-grey {
+  background-color: #323544;
+}
+
+.text-light-grey {
+  color: #bfc1c8;
+}
+
+.text-light-blue {
+  color: #009ad8;
+}
+
+.temp-deg {
+  font-size: 6rem;
+}
+
+footer {
+  background-color: #262936;
+}
+
+footer button {
+  transform: translateX(-5%) !important;
+}
+
+footer a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+footer a:hover {
+  background-color: #009ad8 !important;
+  color: #fff;
+}
+
+/* End Global Styling */

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="author" content="AAK" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>Weather</title>
+  <link rel="icon" href="images/weather-forecast.png" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="bg-dark-blue">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container p-4">
+        <a class="navbar-brand text-white row py-3" href="#">
+          <span class="col-6 d-flex justify-content-end align-items-center">
+            <img src="images/logo2x.png" alt="logo" class="w-50" />
+          </span>
+          <span class="col-6 d-flex flex-column">
+            <span class="font-bold fs-6">Weather</span>
+            <span class="small-fs font-light">tagline goes here</span>
+          </span>
+        </a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-align-right"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item px-1">
+              <a class="nav-link links rounded-pill py-1 px-4 my-2" href="#">Home</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link text-white rounded-pill py-1 px-4 my-2" href="#">News</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link text-white rounded-pill py-1 px-4 my-2" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link text-white rounded-pill py-1 px-4 my-2" href="#">Photos</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link text-white rounded-pill py-1 px-4 my-2" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-img py-5">
+      <div class="container position-relative d-flex align-items-center mb-5">
+        <input id="locationSearch" type="text" placeholder="Find your location ...."
+          class="form-control bg-dark-blue border-0 shadow-none rounded-pill py-3 px-5 text-white" />
+        <button class="btn btn-blue px-5 py-2 rounded-pill btn-position">Find</button>
+      </div>
+      <div class="container">
+        <div class="row bg-grey g-0 rounded-3 overflow-hidden">
+          <div class="col-lg-4">
+            <div class="bg-dark-grey d-flex justify-content-between text-light-grey py-2 px-3">
+              <span id="currentDay"></span>
+              <span id="currentDayInMonth"></span>
+            </div>
+            <div class="p-3">
+              <h5 id="location" class="text-light-grey"></h5>
+              <div class="d-flex flex-lg-column flex-xl-row justify-content-evenly align-items-center">
+                <span id="currentTemp" class="temp-deg font-bold text-white"></span>
+                <img id="currentIcon" />
+              </div>
+              <h6 id="weatherStatus" class="text-light-blue font-light mb-4"></h6>
+              <div class="d-flex mb-2">
+                <span class="text-light-grey d-flex align-items-center">
+                  <img src="images/icon-umberella.png" alt="umberella" class="me-1" />
+                  <span id="humidityRatio"></span>
+                </span>
+                <span class="text-light-grey d-flex align-items-center px-3">
+                  <img src="images/icon-wind.png" alt="wind" class="me-1" />
+                  <span id="windSpeed"></span>
+                </span>
+                <span class="text-light-grey d-flex align-items-center">
+                  <img src="images/icon-compass.png" alt="wind" class="me-1" />
+                  <span id="windDir"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 bg-black bg-opacity-25">
+            <div class="bg-dark-grey text-center text-light-grey">
+              <div class="bg-black bg-opacity-25 p-2">
+                <span id="firstDay"></span>
+              </div>
+            </div>
+            <div class="p-5 text-center">
+              <div>
+                <img id="firstDayIcon" />
+              </div>
+              <h3 id="firstDayMaxTemp" class="text-white mb-0 font-bold"></h3>
+              <h6 id="firstDayMinTemp" class="text-light-grey mb-3"></h6>
+              <h6 id="firstDayWeatherStatus" class="text-light-blue font-light"></h6>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bg-dark-grey text-center text-light-grey p-2">
+              <span id="secondDay"></span>
+            </div>
+            <div class="p-5 text-center">
+              <div>
+                <img id="secondDayIcon" />
+              </div>
+              <h3 id="secondDayMaxTemp" class="text-white mb-0 font-bold"></h3>
+              <h6 id="secondDayMinTemp" class="text-light-grey mb-3"></h6>
+              <h6 id="secondDayWeatherStatus" class="text-light-blue font-light"></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <footer class="p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-4 align-self-start">
+          <div class="container position-relative d-flex align-items-center p-0">
+            <input type="text" placeholder="Enter your email to subscribe ...."
+              class="form-control bg-dark-blue border-0 shadow-none rounded-pill py-3 px-4 px-lg-5 text-white" />
+            <button class="btn btn-blue px-4 px-md-5 py-2 rounded-pill btn-position">Subscribe</button>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center mb-4">
+          <a href="#" class="bg-dark-blue text-light-blue">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="bg-dark-blue text-light-blue">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="bg-dark-blue text-light-blue">
+            <i class="fa-brands fa-google-plus-g"></i>
+          </a>
+          <a href="#" class="bg-dark-blue text-light-blue">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </div>
+        <div class="col-12">
+          <p class="text-light-grey font-light">
+            Copyright 2014 Company name. Designed by Themezy. All
+            rightsreserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
